@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Dasboard">
+
+        <!-- Header Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="16dp">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/textWelcome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Welcome to the Todo App"
+                android:textSize="@dimen/_35ssp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Slogan Image Carousel -->
+        <ViewFlipper
+            android:id="@+id/sloganCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/headerSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_150sdp"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/slide_in_right"
+            android:outAnimation="@anim/slide_out_left">
+
+            <!-- Slogan 1 -->
+            <ImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slogan1"
+                android:contentDescription="Slogan 1" />
+
+            <!-- Slogan 2 -->
+            <ImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slogan14"
+                android:contentDescription="Slogan 2" />
+
+            <!-- Slogan 3 -->
+            <ImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slogan13"
+                android:contentDescription="Slogan 3" />
+        </ViewFlipper>
+
+        <!-- View Button -->
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="View Todo"
+            android:backgroundTint="@android:color/holo_green_dark"
+            app:layout_constraintTop_toBottomOf="@id/sloganCarousel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCreate"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Create Button -->
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create Todo"
+            android:backgroundTint="@android:color/holo_green_dark"
+            app:layout_constraintTop_toBottomOf="@id/sloganCarousel"
+            app:layout_constraintStart_toEndOf="@id/btnView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginStart="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

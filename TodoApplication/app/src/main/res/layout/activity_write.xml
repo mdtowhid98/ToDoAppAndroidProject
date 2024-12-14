@@ -1,0 +1,130 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="@dimen/_16sdp">
+
+        <!-- Switch for Night Mode / Day Mode -->
+        <Switch
+            android:id="@+id/switchNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Night Mode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/noticeList"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/todoListHeader"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todo Application"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_20sdp" />
+
+        <!-- Title -->
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:inputType="text"
+            android:background="@drawable/rounded_edittext"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_edittext"
+            android:padding="@dimen/_10sdp"
+            android:gravity="top"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <!-- Date Field -->
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:gravity="center"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/rounded_edittext"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <!-- Dropdown for Todo Type -->
+        <Spinner
+            android:id="@+id/spinnerTodotype"
+            android:layout_width="match_parent"
+            android:background="@drawable/sniperbackground"
+            android:padding="10dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Priority Section -->
+        <RadioGroup
+            android:id="@+id/radioGroupPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Priority High"
+                android:background="@drawable/rounded_edittext"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Priority Medium"
+                android:background="@drawable/rounded_edittext"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Priority Low"
+                android:background="@drawable/rounded_edittext"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp" />
+        </RadioGroup>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:padding="@dimen/_12sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

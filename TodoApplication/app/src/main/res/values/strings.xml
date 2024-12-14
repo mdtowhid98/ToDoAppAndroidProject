@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TodoApplication</string>
+
+    <!-- String array with a hint item -->
+    <string-array name="todo_types">
+        <item>Select Todo Type</item> <!-- Hint or placeholder item -->
+        <item>Study</item>
+        <item>Outing</item>
+        <item>Date</item>
+        <item>Meetup</item>
+        <item>Shopping</item>
+        <item>Tour</item>
+    </string-array>
+</resources>

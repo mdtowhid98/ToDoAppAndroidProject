@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    android:background="@drawable/shadow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title with 'Title:' prefix -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Title: Clubs Join Installation Ceremony &amp; Family Day 2023"
+            android:textSize="12sp" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clubs Join Installation Ceremony &amp; Family Day 2023"
+            android:textSize="12sp" />
+
+        <!-- Todo Type -->
+        <TextView
+            android:id="@+id/todoType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todo Type: Clubs Join Installation Ceremony &amp; Family Day 2023"
+            android:textSize="12sp" />
+
+        <!-- Priority -->
+        <TextView
+            android:id="@+id/priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Priority: Clubs Join Installation Ceremony &amp; Family Day 2023"
+            android:textSize="12sp" />
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date: 2024-10-07"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
